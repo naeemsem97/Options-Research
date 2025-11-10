@@ -8,18 +8,29 @@ This repository contains various explorations into options volatility trading co
 
 ### Current Projects
 
-#### Vanna Crush Research
-Analysis of vanna exposure dynamics around major market events:
-- **CPI Releases**: Examining how dealer vanna positioning impacts price action before and after Consumer Price Index announcements
-- **Earnings Events**: *(Coming Soon)* Similar analysis for individual equity earnings releases
+#### 📉 Selling Strangles Before CPI
+Event-driven strategy selling strangles ahead of CPI announcements to capitalize on vol crush post-release. Analysis includes:
+- Entry/exit timing optimization
+- Strike selection based on IV percentiles
+- P&L attribution and risk metrics
 
-The vanna crush phenomenon occurs when dealers hedge their options books, potentially amplifying or dampening price movements around realized volatility events.
+#### 🎡 Options Wheel Strategy - Magnificent 7
+Classic wheel strategy (selling puts → assignment → covered calls) backtested on the Mag 7 stocks:
+- AAPL, MSFT, GOOGL, AMZN, NVDA, TSLA, META
+- Premium collection vs. directional exposure analysis
+- Rolling adjustments and assignment handling
 
-#### VIX Calculation Implementation
-Custom implementation of the CBOE VIX calculation methodology using SPX options data:
+#### 📊 SPX & NDX Put Selling
+Systematic short put strategies on major indices:
+- Delta/probability targeting
+- DTE optimization
+- Comparison of risk-adjusted returns between SPX and NDX
+
+#### 📈 VIX Calculation Research
+Custom implementation of the CBOE VIX calculation methodology:
 - One year of historical SPX options chain data
 - Replicates the official CBOE variance calculation
-- Useful for understanding VIX construction and testing VIX-related strategies
+- Foundation for understanding vol surface dynamics and VIX-based strategies
 
 ## 🛠️ Tech Stack
 
@@ -37,10 +48,12 @@ Each file contains standalone research that can be backtested on the QuantConnec
 
 ## 🔮 Future Ideas
 
+- **Earnings Vol Crush**: Pre-earnings IV expansion → post-announcement collapse dynamics
+- **Vol Surface Modeling**: Building and calibrating parametric volatility surfaces (SABR, SVI, etc.)
+- **Kelly Criterion**: Optimal position sizing for options strategies based on edge and bankroll
 - Gamma scalping dynamics
 - Vol surface skew arbitrage
 - Cross-asset vol spillovers
-- More event-driven Greek exposure analysis
 
 ---
 
