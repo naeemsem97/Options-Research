@@ -1,13 +1,18 @@
 # Options Volatility Research 📊
 
-My sandbox of vol ideas and strategies I test on QuantConnect. This isn't financial advice—just a guy playing around with random numbers and education on coding. I vibe code this using LLM models like Claude Sonnet 4.5 and GPT 5, and my own basic experience debugging and troubleshooting.
+My sandbox of vol ideas and strategies I test on QuantConnect. This isn't financial advice—just a guy playing around with random numbers and education on coding. I vibe code this using LLMs like Claude Sonnet 4.5 and GPT 5, and my own basic experience debugging and troubleshooting.
 
 ## 🎯 What's Inside
 
 This repository contains various explorations into options volatility trading concepts, Greeks dynamics, and market microstructure around key events.
 
 ### Current Projects
-
+#### AAPL Earnings IV Crush Strategy
+Event-driven strategy selling strangles ahead of Earnings announcements to capitalize on vol crush post-release. Analysis includes:
+- Examine ATM IV changes Pre and Post Announcement
+- Backtest selling strangles pre-earnings
+- Analyzing the distribution of returns
+ 
 #### 📉 Selling Strangles Before CPI
 Event-driven strategy selling strangles ahead of CPI announcements to capitalize on vol crush post-release. Analysis includes:
 - Entry/exit timing optimization
@@ -48,7 +53,6 @@ Each file contains standalone research that can be backtested on the QuantConnec
 
 ## 🔮 Future Ideas
 
-- **Earnings Vol Crush**: Pre-earnings IV expansion → post-announcement collapse dynamics
 - **Vol Surface Modeling**: Building and calibrating parametric volatility surfaces (SABR, SVI, etc.)
 - **Kelly Criterion**: Optimal position sizing for options strategies based on edge and bankroll
 - Gamma scalping dynamics
