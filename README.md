@@ -1,6 +1,6 @@
 # Options Volatility Research 📊
 
-My sandbox of vol ideas and strategies I test on QuantConnect. This isn't financial advice—just a guy playing around with random numbers and education on coding.
+My sandbox of vol ideas and strategies I test on QuantConnect. This isn't financial advice—just a guy playing around with random numbers and education on coding. I vibe code this using LLM models like Claude Sonnet 4.5 and GPT 5, and my own basic experience debugging and troubleshooting.
 
 ## 🎯 What's Inside
 
