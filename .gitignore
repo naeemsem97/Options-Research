@@ -52,8 +52,9 @@ htmlcov/
 *.parquet
 *.h5
 *.hdf5
-data/
+data/*
 !data/.gitkeep
+!data/README.md
 
 # Logs
 *.log
