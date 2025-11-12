@@ -42,7 +42,7 @@ Classic wheel strategy automated for AAPL, MSFT, GOOGL, AMZN, NVDA, TSLA, META.
 
 ### 📊 SPX & NDX Put-Selling Framework
 
-###$ Systematic short-put approach with:
+Systematic short-put approach with:
 
 - Delta and probability targeting
 
