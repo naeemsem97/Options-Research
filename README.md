@@ -10,12 +10,12 @@ This repository contains quantitative explorations into options volatility, Gree
 Each strategy is tested using QuantConnect’s Python framework with real options chain data.
 
 ## 🧠 Featured Research
-### 🧾 Earnings Strangle Analysis (New)
+### 🧾 [Earnings Strangle Analysis (New)](https://github.com/naeemsem97/Options-Research/blob/main/Earnings_Strangle_Analysis.pdf)
 
 Testing the “IV crush” idea by selling 20-delta strangles before earnings and closing the next morning.
 Spoiler: the results reveal negative expectancy due to fat-tailed losses.
 
-### 📉 CPI Strangle Strategy
+### [📉 CPI Strangle Strategy](https://github.com/naeemsem97/Options-Research/blob/main/Selling%20Strangles%20%20before%20CPI.ipynb)
 
 Event-driven short-volatility model:
 Sell 2-9 DTE strangles before CPI releases, targeting IV crush post-announcement.
@@ -28,7 +28,7 @@ Sell 2-9 DTE strangles before CPI releases, targeting IV crush post-announcement
 
 - P&L decomposition and regime analysis
 
-### 🎡 Options Wheel – Magnificent 7
+### [🎡 Options Wheel – Magnificent 7](https://github.com/naeemsem97/Options-Research/blob/main/Options%20Wheel%20Strategy%20-%20Magnificent%207%20Backtest%20Analysis.ipynb.ipynb)
 
 Classic wheel strategy automated for AAPL, MSFT, GOOGL, AMZN, NVDA, TSLA, META.
 
@@ -40,7 +40,7 @@ Classic wheel strategy automated for AAPL, MSFT, GOOGL, AMZN, NVDA, TSLA, META.
 
 - Rolling adjustments and portfolio aggregation
 
-### 📊 SPX & NDX Put-Selling Framework
+### [📊 SPX & NDX Put-Selling Framework](https://github.com/naeemsem97/Options-Research/blob/main/Selling%20Puts%20on%20SPX%20and%20NDX.ipynb)
 
 Systematic short-put approach with:
 
@@ -50,7 +50,7 @@ Systematic short-put approach with:
 
 - Comparison of SPX vs NDX risk-adjusted returns
 
-### ⚙️ VIX Reconstruction Project
+### [⚙️ VIX Reconstruction Project](https://github.com/naeemsem97/Options-Research/blob/main/VIX%20Calculation%20research.pdf)
 
 Custom Python implementation of the official CBOE VIX methodology.
 
