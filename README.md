@@ -10,85 +10,57 @@ This repository contains quantitative explorations into options volatility, Gree
 Each strategy is tested using QuantConnect’s Python framework with real options chain data.
 
 ## 🧠 Featured Research
-🧾 Earnings Strangle Analysis (New)
+###🧾 Earnings Strangle Analysis (New)
 
 Testing the “IV crush” idea by selling 20-delta strangles before earnings and closing the next morning.
 Spoiler: the results reveal negative expectancy due to fat-tailed losses.
 
-### Key Findings
-
-Profit Factor ≈ 0.69
-
-Win Rate ≈ 60%
-
-Average Win ≈ $142 | Average Loss ≈ $276
-
-Skewness = −2.6 | Kurtosis = 6.2 → Fat tails
-
-Max Drawdown ≈ −$350 K over 8,800 trades
-
-Frequent small wins ≪ occasional blow-ups
-
-### Ideas for Improvement
-
-Filter by low historical earnings volatility
-
-Trade only in low-VIX regimes
-
-Convert to defined-risk spreads (iron condors)
-
-Adjust delta / entry timing
-
-Apply Kelly-based or volatility-scaled sizing
-
-📄 Earnings_Strangle_Analysis.pdf
-
-## 📉 CPI Strangle Strategy
+### 📉 CPI Strangle Strategy
 
 Event-driven short-volatility model:
 Sell 2-9 DTE strangles before CPI releases, targeting IV crush post-announcement.
 
 ### Focus
 
-Entry/exit timing optimization
+- Entry/exit timing optimization
 
-Strike selection via IV percentiles
+- Strike selection via IV percentiles
 
-P&L decomposition and regime analysis
+- P&L decomposition and regime analysis
 
-## 🎡 Options Wheel – Magnificent 7
+### 🎡 Options Wheel – Magnificent 7
 
 Classic wheel strategy automated for AAPL, MSFT, GOOGL, AMZN, NVDA, TSLA, META.
 
 ### Includes
 
-Put → assignment → covered call cycle
+- Put → assignment → covered call cycle
 
-Premium capture vs. directional exposure
+- Premium capture vs. directional exposure
 
-Rolling adjustments and portfolio aggregation
+- Rolling adjustments and portfolio aggregation
 
-## 📊 SPX & NDX Put-Selling Framework
+### 📊 SPX & NDX Put-Selling Framework
 
-### Systematic short-put approach with:
+###$ Systematic short-put approach with:
 
-Delta and probability targeting
+- Delta and probability targeting
 
-DTE optimization
+- DTE optimization
 
-Comparison of SPX vs NDX risk-adjusted returns
+- Comparison of SPX vs NDX risk-adjusted returns
 
-## ⚙️ VIX Reconstruction Project
+### ⚙️ VIX Reconstruction Project
 
 Custom Python implementation of the official CBOE VIX methodology.
 
-### Goals
+#### Goals
 
-Replicate variance calculation using one year of SPX chains
+- Replicate variance calculation using one year of SPX chains
 
-Study vol-surface behavior and term-structure shifts
+- Study vol-surface behavior and term-structure shifts
 
-Support vol-regime filters for other models
+- Support vol-regime filters for other models
 
 ## 🧰 Tech Stack
 Component	Description
@@ -111,21 +83,21 @@ Run backtests, compare results, and iterate
 
 ## 🔮 Roadmap / Future Work
 
-Vol-surface modeling (SVI, SABR)
+- Vol-surface modeling (SVI, SABR)
 
-Adaptive Kelly sizing for short-vol portfolios
+- Adaptive Kelly sizing for short-vol portfolios
 
-Volatility-regime filters (VIX < SMA9, HV/IV spreads)
+- Volatility-regime filters (VIX < SMA9, HV/IV spreads)
 
-Gamma scalping and skew arbitrage
+- Gamma scalping and skew arbitrage
 
-Cross-asset volatility spillover research
+- Cross-asset volatility spillover research
 
 ## 🧾 Disclaimer
 
 This repository is for educational and experimental purposes only.
 Nothing here constitutes financial advice or a trading recommendation.
-All results are hypothetical; use this research at your own risk.
+All results are hypothetical; use this research at your own risk. I do not trade on any of this and probably never will.
 
 ## 🧩 Contribute / Collaborate
 
