@@ -10,7 +10,7 @@ This repository contains quantitative explorations into options volatility, Gree
 Each strategy is tested using QuantConnect’s Python framework with real options chain data.
 
 ## 🧠 Featured Research
-###🧾 Earnings Strangle Analysis (New)
+### 🧾 Earnings Strangle Analysis (New)
 
 Testing the “IV crush” idea by selling 20-delta strangles before earnings and closing the next morning.
 Spoiler: the results reveal negative expectancy due to fat-tailed losses.
