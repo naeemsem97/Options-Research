@@ -1,64 +1,134 @@
-# Options Volatility Research 📊
+# 📊 Options Volatility Research
 
-My sandbox of vol ideas and strategies I test on QuantConnect. This isn't financial advice—just a guy playing around with random numbers and education on coding. I vibe code this using LLMs like Claude Sonnet 4.5 and GPT 5, and my own basic experience debugging and troubleshooting.
+My sandbox for exploring volatility trading, market microstructure, and event-driven option strategies on QuantConnect.
+This is not financial advice — just me experimenting with data, risk, and code.
+I vibe-code this with help from Claude Sonnet 4.5, GPT-5, and plenty of personal debugging.
 
-## 🎯 What's Inside
+## 🎯 Overview
 
-This repository contains various explorations into options volatility trading concepts, Greeks dynamics, and market microstructure around key events.
+This repository contains quantitative explorations into options volatility, Greeks dynamics, and event-based behavior.
+Each strategy is tested using QuantConnect’s Python framework with real options chain data.
 
-### Current Projects
-#### AAPL Earnings IV Crush Strategy
-Event-driven strategy selling strangles ahead of Earnings announcements to capitalize on vol crush post-release. Analysis includes:
-- Examine ATM IV changes Pre and Post Announcement
-- Backtest selling strangles pre-earnings
-- Analyzing the distribution of returns
- 
-#### 📉 Selling Strangles Before CPI
-Event-driven strategy selling strangles ahead of CPI announcements to capitalize on vol crush post-release. Analysis includes:
-- Entry/exit timing optimization
-- Strike selection based on IV percentiles
-- P&L attribution and risk metrics
+## 🧠 Featured Research
+🧾 Earnings Strangle Analysis (New)
 
-#### 🎡 Options Wheel Strategy - Magnificent 7
-Classic wheel strategy (selling puts → assignment → covered calls) backtested on the Mag 7 stocks:
-- AAPL, MSFT, GOOGL, AMZN, NVDA, TSLA, META
-- Premium collection vs. directional exposure analysis
-- Rolling adjustments and assignment handling
+Testing the “IV crush” idea by selling 20-delta strangles before earnings and closing the next morning.
+Spoiler: the results reveal negative expectancy due to fat-tailed losses.
 
-#### 📊 SPX & NDX Put Selling
-Systematic short put strategies on major indices:
-- Delta/probability targeting
-- DTE optimization
-- Comparison of risk-adjusted returns between SPX and NDX
+### Key Findings
 
-#### 📈 VIX Calculation Research
-Custom implementation of the CBOE VIX calculation methodology:
-- One year of historical SPX options chain data
-- Replicates the official CBOE variance calculation
-- Foundation for understanding vol surface dynamics and VIX-based strategies
+Profit Factor ≈ 0.69
 
-## 🛠️ Tech Stack
+Win Rate ≈ 60%
 
-- **Platform**: QuantConnect
-- **Language**: Python (QC framework)
-- **Data**: SPX/SPY options chains, market data
+Average Win ≈ $142 | Average Loss ≈ $276
 
-## 📝 Disclaimer
+Skewness = −2.6 | Kurtosis = 6.2 → Fat tails
 
-This is purely educational and experimental research. Nothing here constitutes financial advice or trading recommendations. All strategies are theoretical exercises in quantitative finance and programming.
+Max Drawdown ≈ −$350 K over 8,800 trades
+
+Frequent small wins ≪ occasional blow-ups
+
+### Ideas for Improvement
+
+Filter by low historical earnings volatility
+
+Trade only in low-VIX regimes
+
+Convert to defined-risk spreads (iron condors)
+
+Adjust delta / entry timing
+
+Apply Kelly-based or volatility-scaled sizing
+
+📄 Earnings_Strangle_Analysis.pdf
+
+## 📉 CPI Strangle Strategy
+
+Event-driven short-volatility model:
+Sell 2-9 DTE strangles before CPI releases, targeting IV crush post-announcement.
+
+### Focus
+
+Entry/exit timing optimization
+
+Strike selection via IV percentiles
+
+P&L decomposition and regime analysis
+
+## 🎡 Options Wheel – Magnificent 7
+
+Classic wheel strategy automated for AAPL, MSFT, GOOGL, AMZN, NVDA, TSLA, META.
+
+### Includes
+
+Put → assignment → covered call cycle
+
+Premium capture vs. directional exposure
+
+Rolling adjustments and portfolio aggregation
+
+## 📊 SPX & NDX Put-Selling Framework
+
+### Systematic short-put approach with:
+
+Delta and probability targeting
+
+DTE optimization
+
+Comparison of SPX vs NDX risk-adjusted returns
+
+## ⚙️ VIX Reconstruction Project
+
+Custom Python implementation of the official CBOE VIX methodology.
+
+### Goals
+
+Replicate variance calculation using one year of SPX chains
+
+Study vol-surface behavior and term-structure shifts
+
+Support vol-regime filters for other models
+
+## 🧰 Tech Stack
+Component	Description
+Platform	QuantConnect (LEAN Engine)
+Language	Python 3
+Data	SPX/SPY Options Chains, EODHD Events, FRED Macro Releases
+Tools	Pandas, NumPy, Matplotlib, Seaborn
 
 ## 🚀 Usage
 
-Each file contains standalone research that can be backtested on the QuantConnect platform. Clone and upload to your QuantConnect account to explore the research.
+Each folder is self-contained research you can upload directly to QuantConnect.
 
-## 🔮 Future Ideas
+Clone this repository
 
-- **Vol Surface Modeling**: Building and calibrating parametric volatility surfaces (SABR, SVI, etc.)
-- **Kelly Criterion**: Optimal position sizing for options strategies based on edge and bankroll
-- Gamma scalping dynamics
-- Vol surface skew arbitrage
-- Cross-asset vol spillovers
+Upload a file or notebook to QuantConnect
 
----
+Adjust parameters (delta, DTE, entry time, IV filter, etc.)
 
-*Feel free to fork, experiment, and share your findings. Happy coding!* 🤓
+Run backtests, compare results, and iterate
+
+## 🔮 Roadmap / Future Work
+
+Vol-surface modeling (SVI, SABR)
+
+Adaptive Kelly sizing for short-vol portfolios
+
+Volatility-regime filters (VIX < SMA9, HV/IV spreads)
+
+Gamma scalping and skew arbitrage
+
+Cross-asset volatility spillover research
+
+## 🧾 Disclaimer
+
+This repository is for educational and experimental purposes only.
+Nothing here constitutes financial advice or a trading recommendation.
+All results are hypothetical; use this research at your own risk.
+
+## 🧩 Contribute / Collaborate
+
+Pull requests, data insights, and strategy suggestions are welcome!
+If you’ve run a similar backtest or found ways to hedge fat-tail risk — share your results.
+Let’s make options research a bit more transparent 💬
